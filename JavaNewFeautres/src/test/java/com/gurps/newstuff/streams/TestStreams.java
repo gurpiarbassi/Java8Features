@@ -31,16 +31,16 @@ public class TestStreams {
 	public void testFindHighestScorerInYear() {
 		fail("Not yet implemented");
 
-		/*
-		 * List<Student> students = new ArrayList<>(); students.add(new
-		 * Student("Gurps", new BigDecimal("99.0"), 2001L)); students.add(new
-		 * Student("Steve", new BigDecimal("78.0"), 2001L)); students.add(new
-		 * Student("Dan", new BigDecimal("99.0"), 1980L)); students.add(new
-		 * Student("Lisa", new BigDecimal("26.0"), 1999L));
-		 * 
-		 * students.stream().filter(Student s -> s.getYear() == 2001)
-		 * .map(Student s -> s.getScore()) .max();
-		 */
+		
+		  List<Student> students = new ArrayList<>(); 
+		  students.add(new Student("Gurps",99, 2001L));
+		  students.add(new Student("Steve", 78, 2001L)); 
+		  students.add(new Student("Dan", 99, 1980L)); 
+		  students.add(new Student("Lisa", 26, 1999L));
+		  
+		  int highest = students.stream().filter(s -> s.getYear() == 2001).map(s -> s.getScore()).max(null).get();
+		  assertEquals(99, highest);
+		 
 	}
 
 	@Test

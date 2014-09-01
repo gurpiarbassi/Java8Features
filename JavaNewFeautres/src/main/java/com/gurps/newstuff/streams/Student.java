@@ -1,15 +1,14 @@
 package com.gurps.newstuff.streams;
 
-import java.math.BigDecimal;
 
 public class Student {
 
 	private String name;
-	private BigDecimal score;
+	private int score;
 	private Long year;
 	
 	
-	public Student(String name, BigDecimal score, Long year) {
+	public Student(String name, int score, Long year) {
 		super();
 		this.name = name;
 		this.score = score;
@@ -21,7 +20,7 @@ public class Student {
 	}
 
 
-	public BigDecimal getScore() {
+	public int getScore() {
 		return score;
 	}
 
