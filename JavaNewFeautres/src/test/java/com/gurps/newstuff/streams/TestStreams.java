@@ -29,8 +29,6 @@ public class TestStreams {
 	 * Find the highest scoring student in year 2001.
 	 */
 	public void testFindHighestScorerInYear() {
-		fail("Not yet implemented");
-
 		
 		  List<Student> students = new ArrayList<>(); 
 		  students.add(new Student("Gurps",99, 2001L));
