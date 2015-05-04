@@ -36,7 +36,10 @@ public class TestStreams {
 		  students.add(new Student("Dan", 99, 1980L)); 
 		  students.add(new Student("Lisa", 26, 1999L));
 		  
-		  int highest = students.stream().filter(s -> s.getYear() == 2001L).map(s -> s.getScore()).max(Integer::max).get();
+		  int highest = students.stream()
+				  					.filter(s -> s.getYear() == 2001L) //filter records so only consider 2001 grades
+				  					.map(s -> s.getScore()) //for each student s, map it to its score so the stream is now scores rather than students
+				  					.max(Integer::max).get(); //perform the max function on the stream
 		  assertEquals(99, highest);
 		 
 	}
